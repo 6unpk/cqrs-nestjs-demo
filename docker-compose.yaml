@@ -1,0 +1,15 @@
+version: "3.7"
+services:
+  db:
+    platform: linux/x86_64
+    image: mysql:5.7
+    container_name: simple_db
+    environment:
+      - MYSQL_ROOT_PASSWORD=PASSWORD
+      - MYSQL_DATABASE=simple
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=abcd
+    ports:
+      - "127.0.0.1:3306:3306"
+    networks:
+      - default
