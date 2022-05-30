@@ -97,7 +97,10 @@ export class TemplateController {
   @Post()
   async addTemplateList(@Body() request: TemplateRequest): Promise<Template> {
     return TemplateController.entityToDto(
-      await this.templateService.createTemplate(request.name),
+      await this.templateService.createTemplate(
+        request.name,
+        request.categories,
+      ),
     );
   }
 

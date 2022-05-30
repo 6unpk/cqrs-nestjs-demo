@@ -76,7 +76,7 @@ describe('AppController (e2e)', () => {
     const post = await request(app.getHttpServer())
       .post('/templates')
       .type('application/json')
-      .send({ name: 'americano' });
+      .send({ name: 'americano', categories: [] });
 
     expect(post.status).toBe(201);
 

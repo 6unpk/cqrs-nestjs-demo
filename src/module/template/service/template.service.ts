@@ -56,10 +56,18 @@ export class TemplateService {
     return result[0];
   }
 
-  async createTemplate(name: string): Promise<TemplateEntity> {
+  async createTemplate(
+    name: string,
+    categories: string[],
+  ): Promise<TemplateEntity> {
     return this.templateRepository.save({
       templateId: uuidv4(),
       name,
+      categories: categories.map((e) => {
+        const entity = new CategoryEntity();
+        entity.categoryId = e;
+        return entity;
+      }),
       createdAt: new Date(),
     });
   }
