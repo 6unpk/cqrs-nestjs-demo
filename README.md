@@ -24,12 +24,6 @@ MacOs, Linux 의 경우 다음 sh 스크립트를 실행합니다. DB 및 관련
 ./setup.sh
 ```
 
-마찬가지로 Windows 의 경우 Powershell 스크립트를 실행합니다.
-
-```
-./setup.ps1
-```
-
 ### Test
 
 E2E 테스트만 지원합니다. E2E 테스트 전 반드시 Docker DB 컨테이너가 구동되어야합니다.
