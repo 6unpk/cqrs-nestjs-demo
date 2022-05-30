@@ -70,7 +70,7 @@ describe('AppController (e2e)', () => {
       `/categories/${post.body.id}`,
     );
 
-    return expect(_delete.status).toBe(201);
+    return expect(_delete.status).toBe(200);
   });
   it('/templates (POST) (UPDATE) (DELETE)', async () => {
     const post = await request(app.getHttpServer())
@@ -83,7 +83,7 @@ describe('AppController (e2e)', () => {
     const put = await request(app.getHttpServer())
       .put(`/templates/${post.body.id}`)
       .type('application/json')
-      .send({ name: 'SUV' });
+      .send({ name: 'SUV', categories: [] });
 
     expect(put.status).toBe(200);
 
