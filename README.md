@@ -1,6 +1,6 @@
-# CQRS Based Nest.js
+# simple Nest.js i18n
 
-cqrs 패턴을 적용한 테스트 어플리케이션입니다.
+nestjs 테스트 어플리케이션입니다.
 
 ### Prerequisite
 
