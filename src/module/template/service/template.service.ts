@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { HttpError } from 'src/module/common/http-error';
+import { HttpError } from '../../common/http-error';
 import { Repository } from 'typeorm';
 import { TemplateEntity } from '../entity/template.entity';
 import { SortType } from '../../common/sort-type.enum';
