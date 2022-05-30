@@ -30,16 +30,10 @@ MacOs, Linux 의 경우 다음 sh 스크립트를 실행합니다. DB 및 관련
 
 ### Test
 
-E2E 테스트만 지원합니다.
+E2E 테스트만 지원합니다. E2E 테스트 전 반드시 Docker DB 컨테이너가 구동되어야합니다.
 
 ```
-yarn run test
+yarn run test:e2e
 ```
 
-커버리지를 확인은 다음과 같습니다.
-
-```
-yarn run coverage
-```
-
-http://localhost:8080/swagger-ui/index.html 에서 직접 테스트도 가능합니다.
+http://localhost:8080/api 에서 직접 테스트도 가능합니다.
